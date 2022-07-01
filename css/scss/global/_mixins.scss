@@ -1,0 +1,10 @@
+@mixin desktop-supported {
+    @media not all and (hover: none) {
+        @content;
+    }
+}
+
+@mixin m-h-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
