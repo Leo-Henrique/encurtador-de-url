@@ -1,10 +1,86 @@
+// general
 @mixin desktop-supported {
     @media not all and (hover: none) {
         @content;
     }
 }
-
 @mixin m-h-auto {
     margin-left: auto;
     margin-right: auto;
+}
+@mixin cta {
+    display: inline-block;
+    padding: 1.6rem 4rem;
+    background-color: $primary;
+    border-radius: 50px;
+    color: #FFF;
+    font-weight: 700;
+    text-align: center;
+    transition: background-color 200ms ease-in-out;
+    cursor: pointer;
+
+    @include desktop-supported {
+        &:hover {
+            background-color: $primary-light-1;
+        }
+    }
+    &:active {
+        background-color: $primary-light-1;
+    }
+}
+
+
+
+// grid-system
+@mixin container($standard, $xxl, $xl, $lg, $md) {
+    max-width: $standard;
+
+    @include breakpoint-xxl {
+        max-width: $xxl;
+    }
+    @include breakpoint-xl {
+        max-width: $xl;
+    }
+    @include breakpoint-lg {
+        max-width: $lg;
+    }
+    @include breakpoint-md {
+        max-width: $md;
+    }
+    @include breakpoint-sm {
+        max-width: 100%;
+    }
+}
+
+
+
+// responsive
+@mixin breakpoint-xxl {
+    @media (max-width: 1399.98px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-xl {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-lg {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-md {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin breakpoint-sm {
+    @media (max-width: 575.98px) {
+        @content;
+    }
 }

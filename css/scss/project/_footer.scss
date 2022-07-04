@@ -1,0 +1,176 @@
+.footer {
+    background-color: $support-dark-2;
+    font-size: 1.6rem;
+    line-height: 1.4;
+
+    &-main {
+        padding-top: 7rem - $padding-headerItem;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        column-gap: 10rem;
+
+        .footer-logo path {
+            fill: #FFF;
+        }
+        .footer-links {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            column-gap: 10rem;
+        }
+        .footer-links .links {
+           padding-top: $padding-headerItem;
+        }
+        .footer-links .links h2 {
+            color: #FFF;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+        }
+        .footer-links .links a {
+            display: block;
+            white-space: nowrap;
+            padding: 0.5rem 0;
+            color: $support-light-2;
+            transition: color 200ms ease-in-out;
+
+            @include desktop-supported {
+                &:hover {
+                    color: $primary;
+                }
+            }
+            &:active {
+                color: $primary;
+            }
+        }
+        .footer-links .social-media ul {
+            display: flex;
+            align-items: center;
+        }
+        .footer-links .social-media a {
+            display: block;
+            padding: $padding-headerItem 1rem;
+
+            path {
+                transition: fill 200ms ease-in-out;
+            }
+            @include desktop-supported {
+                &:hover path {
+                    fill: $primary;
+                }
+            }
+            &:active path {
+                fill: $primary;
+            }
+        }
+    }
+    &-copy {
+        margin-top: 5rem;
+        padding-top: 5rem - $padding-headerItem;
+        padding-bottom: 7rem - $padding-headerItem;
+        border-top: 1px solid $support-dark-1;
+        text-align: center;
+        font-size: 1.4rem;
+        line-height: 1.3;
+
+        p {
+            display: inline-block;
+            color: $support-light-2 - 40%;
+        }
+        a {
+            display: inline-block;
+            padding: $padding-headerItem 0;
+            color: #FFF;
+            transition: color 200ms ease-in-out;
+
+            @include desktop-supported {
+                &:hover {
+                    color: $primary;
+                }
+            }
+            &:active {
+                color: $primary;
+            }
+        }
+    }
+}
+
+
+@include breakpoint-xxl {
+    .footer-main {
+        column-gap: 8rem;
+
+        .footer-links {
+            column-gap: 6rem;
+        }
+    }
+}
+
+@include breakpoint-xl {
+    .footer-main .footer-links .social-media ul {
+        flex-direction: column;
+    }
+}
+
+@include breakpoint-lg {
+    .footer-main {
+        padding-top: 6rem - $padding-headerItem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: initial;
+        row-gap: 5rem - $padding-headerItem;
+
+        .footer-logo {
+            padding: $padding-headerItem;
+        }
+        .footer-links {
+            flex-direction: column;
+            align-items: initial;
+            justify-content: initial;
+            row-gap: 5rem - $padding-headerItem;
+            text-align: center;
+        }
+        .footer-links .links {
+           padding-top: 0;
+        }
+        .footer-links .links a {
+            width: 100%;
+            padding: 0.5rem $padding-headerItem;
+        }
+        .footer-links .social-media ul {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+    .footer-copy {
+        margin-top: 6rem - $padding-headerItem;
+        padding-top: 4rem - $padding-headerItem;
+        padding-bottom: 6rem - $padding-headerItem;
+    }
+}
+
+@include breakpoint-sm {
+    .footer {
+        font-size: 1.5rem;
+    }
+    .footer-main {
+        padding-top: 5rem - $padding-headerItem;
+
+        .footer-links .links h2 {
+            margin-bottom: 1.2rem;
+        }
+    }
+    .footer-copy {
+        margin-top: 4rem - $padding-headerItem;
+        padding-top: 4rem - 0.6rem;
+        padding-bottom: 4rem - 0.6rem;
+
+        p {
+            display: block;
+        }
+        a {
+            padding: 0.6rem 0;
+
+        }
+    }
+}

@@ -2,4 +2,7 @@
 $rfs-rem-value: 10;
 
 // Fator de diminuição do font-size, aumente para diminuir ainda mais
-$rfs-factor: 50;
+$rfs-factor: 5;
+
+// Breakpoint em que o font-size começara a diminuir
+$rfs-breakpoint: 1400px;

@@ -2,6 +2,7 @@
 @import 
 "libraries/normalize",
 "libraries/meyer-web-reset",
+"custom/rfs",
 "libraries/rfs";
 
 // Variáveis e mixins
@@ -11,8 +12,7 @@
 
 // Customizações das bibliotecas
 @import 
-"custom/rfs",
 "custom/reset";
 
 // Projeto
-@import "project";
+@import "project"; 

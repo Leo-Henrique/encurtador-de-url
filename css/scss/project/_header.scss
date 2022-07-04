@@ -1,0 +1,201 @@
+.header {
+    padding-top: 4.5rem - $padding-headerItem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    column-gap: 4.5rem - $padding-headerItem * 2;
+
+}
+
+.header-logo,
+.footer-logo {
+    padding: $padding-headerItem;
+    padding-left: 0;
+    opacity: 1;
+    transition: opacity 300ms ease-in-out;
+
+    @include desktop-supported {
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+    &:active {
+        opacity: 0.6;
+    }
+}
+
+#headerBtnMobile {
+    display: none;
+
+    @include desktop-supported {
+        &:hover span {
+            color: $support-light-1;
+        }
+    }
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+    column-gap: 4.5rem - $padding-headerItem * 2;
+    flex: 1;
+
+    .menu-internal,
+    .menu-user {
+        display: flex;
+        align-items: center;
+
+        a, button {
+            display: block;
+            font-size: 1.6rem;
+            line-height: 1.2;
+            text-align: center;
+            font-weight: 700;
+            cursor: pointer;
+        }
+        a,
+        li:first-child button {
+            padding: $padding-headerItem;
+            color: $support-light-2;
+            transition: color 300ms ease-in-out;
+
+            @include desktop-supported {
+                &:hover {
+                    color: $support-dark-2;
+                }
+            }
+        }
+        li:first-child button {
+            margin-right: $padding-headerItem;
+        }
+        li:last-child button {
+            @include cta;
+            padding: 1.8rem 3rem;
+        }
+    }
+    .menu-user {
+        margin-left: auto;
+    }
+}
+
+@include breakpoint-lg {
+    .header-container {
+        position: relative;
+        flex-wrap: wrap;
+    }
+    #headerBtnMobile {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 45px;
+        height: 45px;
+        cursor: pointer;
+        margin-left: auto;
+    
+        > span,
+        > span::before,
+        > span::after {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: currentColor;
+        }
+        span {
+            color: $support-light-2;
+            transition-property: background-color, color;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in-out;
+    
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                transition: transform 300ms ease-in-out;
+            }
+            &::before {
+                transform: translate3D(0, -9px, 0);
+            }
+            &::after {
+                transform: translate3D(0, 9px, 0);
+            }
+        }
+        &.show span {
+            background-color: transparent;
+    
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: rotate(-45deg);
+            }
+        }
+        &:active span {
+            color: $support-light-1;
+        }
+    }
+    .header-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        width: calc(100% - 30px);
+        margin-top: 3rem - $padding-headerItem;
+        background-color: $primary-dark-1;
+        border-radius: 10px;
+        padding: 4rem 2.5rem;
+    
+        .menu-internal,
+        .menu-user {
+            width: 100%;
+            flex-direction: column;
+            align-items: initial;
+    
+            a, li:first-child button {
+                width: 100%;
+                color: #FFF;
+
+                &:hover {
+                    color: #FFF;
+                }
+                &:active {
+                    color: $primary;
+                }
+            }
+            li:first-child button {
+                margin-right: initial;
+                margin-bottom: $padding-headerItem;
+            }
+            li:last-child {
+                align-self: center;
+            }
+        }
+        .menu-user {
+            margin-top: 7rem / 2 - $padding-headerItem;
+            padding-top: 7rem / 2 - $padding-headerItem;
+            border-top: 1px solid $support-light-2;
+            margin-left: initial;
+        }
+    }
+    .header-menu.display {
+        display: flex;
+    }
+}
+
+@include breakpoint-sm {
+    .header {
+        padding-top: 3rem - $padding-headerItem;
+    }
+    .header-menu {
+        padding: 2.5rem;
+
+        .menu-user li:last-child {
+            align-self: initial;
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}

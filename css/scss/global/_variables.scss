@@ -1,8 +1,30 @@
 // Tipografia
 $font-size-root: 62.5%;
+$h1: 6.26rem;
+$h2: 4.6rem;
+$h3: 2.2rem;
+$body: 2rem;
+$body-sm: $body - .4rem;
 
 
 // Cores
+$primary-light-1: #8becec;
+$primary: #2acfcf;
+$primary-dark-1: #3b3054;
+
+$secondary: #f46262;
+
+$support-light-1: #bfbfbf;
+$support-light-2: #9e9aa7;
+$support-dark-1: #35323e;
+$support-dark-2: #232127;
 
 
 // Projeto
+$padding-headerItem: 1.2rem;
+
+$borderRadius-shorten: 10px;
+$padding-shortenItem: 1.2rem;
+
+$dimensions-statisticsIcon: 90px;
+$displacement-statisticsIcon: $dimensions-statisticsIcon / 2 
