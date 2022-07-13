@@ -1,5 +1,5 @@
 .statistics {
-    padding-top: 12rem;
+    margin-top: 12rem;
     padding-bottom: 12rem;
 
     &-intro {
@@ -72,7 +72,7 @@
 
 @include breakpoint-xxl {
     .statistics {
-        padding-top: 8rem;
+        margin-top: 8rem;
         padding-bottom: 8rem;
     }
 
