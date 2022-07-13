@@ -54,7 +54,7 @@ Para a resolução deste desafio, os usuários devem ser capazes de:
 
 Criei uma função que permite passar uma string como argumento para exibir uma mensagem personalizada ao usuário em determinadas ocasiões.
 
-Como uma função assíncrona **(async function)** pode esperar uma promise indicada por **await** ser resolvida para que só então o resto das próximas linhas de código serem executadas, executo a função citada anteriormente que exibe uma mensagem como ***"Encurtando sua URL..."*** antes das expressões com await e executo-a novamente com outra mensagem como ***"Link encurtado com sucesso"*** somente após as declarações com await.
+Como uma função assíncrona (`async function`) pode esperar uma promise indicada por `await` ser resolvida para que só então o resto das próximas linhas de código serem executadas, executo a função citada anteriormente que exibe uma mensagem como ***"Encurtando sua URL..."*** antes das expressões com await e executo-a novamente com outra mensagem como ***"Link encurtado com sucesso"*** somente após as declarações com await.
 
 Dessa forma, caso o servidor da API esteja lento ou com problemas técnicos, o usuário ao menos sabe que o seu pedido foi atendido, e a primeira mensagem "Encurtando sua URL..." ficará sendo exibida até a solicitação com a API for bem sucedida. Um detalhe relativamente simples, mas importante para deixar o usuário informado e menos frustrado.
 
@@ -68,7 +68,7 @@ https://user-images.githubusercontent.com/72027449/178770951-5a96cdd0-45fb-4d92-
 
 A API também retorna com chaves / propriedades diferentes no arquivo JSON dependendo de algumas condições, contendo códigos de erros e uma mensagem referente a cada erro. Dessa forma, mesmo que a solicitação com a API seja bem sucedida, fico verificando se a API está retornando essas chaves diferentes, para exibir mensagens personalizadas de acordo com o erro para o usuário.
 
-Assim, uma mensagem de erro genérica se encontra no bloco de código dentro de **catch** na função assíncrona caso não haja sucesso ao solicitar a API. No entanto, mesmo caso as promises sejam resolvidas e **catch** seja descartado, mensagens de erros mais específicas serão exibidas caso necessário para o usuário.
+Assim, uma mensagem de erro genérica se encontra no bloco de código dentro de `catch` na função assíncrona caso não haja sucesso ao solicitar a API. No entanto, mesmo caso as promises sejam resolvidas e `catch` seja descartado, mensagens de erros mais específicas serão exibidas caso necessário para o usuário.
 
 ```js
 async function requestAPI() {
