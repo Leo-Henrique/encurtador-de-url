@@ -111,7 +111,7 @@ async function requestAPI() {
 }
 ```
 
-Pude exibir a mensagem de erro mostrada a seguir com base em uns dos códigos de erros retornando pela API. 
+Pude exibir a mensagem de erro mostrada a seguir com base em uns dos códigos de erros retornados pela API. 
 
 https://user-images.githubusercontent.com/72027449/178774173-6f5cc404-a9a0-4f22-9e15-2956bab5b5c3.mp4
 
