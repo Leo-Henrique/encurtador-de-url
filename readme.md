@@ -54,9 +54,9 @@ Para a resolução deste desafio, os usuários devem ser capazes de:
 
 Criei uma função que permite passar uma string como argumento para exibir uma mensagem personalizada ao usuário em determinadas ocasiões.
 
-Como uma função assíncrona (`async function`) pode esperar uma promise indicada por `await` ser resolvida para que só então o resto das próximas linhas de código serem executadas, executo a função citada anteriormente que exibe uma mensagem como ***"Encurtando sua URL..."*** antes das expressões com await e executo-a novamente com outra mensagem como ***"Link encurtado com sucesso"*** somente após as declarações com await.
+Como uma função assíncrona (`async function`) pode esperar uma **promise** indicada por `await` ser resolvida para que só então o resto das próximas linhas de código serem executadas, executo a função citada anteriormente que exibe uma mensagem como *"Encurtando sua URL..."* antes das expressões com `await` e executo-a novamente com outra mensagem como *"Link encurtado com sucesso"* somente após as declarações com `await`.
 
-Dessa forma, caso o servidor da API esteja lento ou com problemas técnicos, o usuário ao menos sabe que o seu pedido foi atendido, e a primeira mensagem "Encurtando sua URL..." ficará sendo exibida até a solicitação com a API for bem sucedida. Um detalhe relativamente simples, mas importante para deixar o usuário informado e menos frustrado.
+Dessa forma, caso o servidor da API esteja lento ou com problemas técnicos, o usuário ao menos sabe que o seu pedido foi atendido, e a primeira mensagem *"Encurtando sua URL..."* ficará sendo exibida até a solicitação com a API for bem sucedida. Um detalhe relativamente simples, mas importante para deixar o usuário informado e menos frustrado.
 
 https://user-images.githubusercontent.com/72027449/178766826-2a5e414a-7b2a-444a-915f-3517d2d2973e.mp4
 
